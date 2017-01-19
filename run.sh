@@ -1,11 +1,13 @@
-# Experimental-CI
 #!/bin/bash
 sudo apt-get update
+echo "hi sid"
+
 sudo apt-get install language-pack-en
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 echo "deb http://pkg.jenkins-ci.org/debian binary/" | sudo tee -a /etc/apt/sources.list.d/jenkins.list
 sudo apt-get update
 sudo apt-get install jenkins
+
 
 sudo apt-get install apache2
 sudo a2enmod proxy
@@ -22,10 +24,3 @@ sudo echo '<VirtualHost *:80>
     ProxyPass / http://localhost:8080/
 </VirtualHost>' | sudo tee -a /etc/apache2/sites-available/jenkins.conf
 
-
-sudo a2ensite jenkins
-sudo service apache2 reload
-
-sudo apt-get install oracle-java7-installer maven git-core
-readlink -f /usr/bin/javac
-readlink -f /usr/bin/mvn
