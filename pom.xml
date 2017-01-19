@@ -1,5 +1,5 @@
 <project>
-  <modelVersion>1.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
   <groupId>ci.cd.com</groupId>
   <artifactId>ci</artifactId>
   <packaging>jar</packaging>
