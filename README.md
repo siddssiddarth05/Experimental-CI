@@ -26,6 +26,8 @@ sudo echo '<VirtualHost *:80>
 sudo a2ensite jenkins
 sudo service apache2 reload
 
-sudo apt-get install oracle-java7-installer maven git-core
+sudo apt-get install openjdk-8-jre
+sudo apt-get install openjdk-8-jdk
+sudo apt-get install maven git-core
 readlink -f /usr/bin/javac
 readlink -f /usr/bin/mvn
